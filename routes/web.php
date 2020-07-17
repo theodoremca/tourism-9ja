@@ -14,19 +14,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/', function () {
-    return view('tourismpage');
+    return view('home');
 });
 
 Auth::routes();
 
 Route::group(['middleware' => 'auth'], function () {
-    Route::view('/', 'home')->name('home');
+Route::get('/home', 'HomeController@index')->name('home');
+
+    // Route::view('/', 'home')->name('home');
 });
 
 Route::view('/blog', 'blog')->name('blog');
 Route::view('/about', 'about')->name('about');
-// Route::view('/login', 'login')->name('login');
+Route::view('/login', 'login')->name('login');
 Route::view('/contact', 'contact')->name('contact');
 Route::view('/tourismpage', 'tourismpage')->name('tourismpage');
-Auth::routes();
 
+Auth::routes();
