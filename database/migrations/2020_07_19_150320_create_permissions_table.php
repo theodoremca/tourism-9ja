@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSubCommentsTable extends Migration
+class CreatePermissionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,10 @@ class CreateSubCommentsTable extends Migration
      */
     public function up()
     {
-        Schema::create('sub_comments', function (Blueprint $table) {
+        Schema::create('permissions', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('tourism_place_id')->nullable();
-            $table->unsignedBigInteger('user_id')->nullable();
-            $table->unsignedBigInteger('comment_id')->nullable();
-            $table->string('comment');
+            $table->unsignedBigInteger('role_id');
+            $table->string('permission');
             $table->softDeletes();
             $table->timestamps();
         });
@@ -31,6 +29,6 @@ class CreateSubCommentsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sub_comments');
+        Schema::dropIfExists('permissions');
     }
 }

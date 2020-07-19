@@ -21,6 +21,7 @@ class CreateTourismPlacesTable extends Migration
             $table->string('country');
             $table->string('type');
             $table->string('image', 255)->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

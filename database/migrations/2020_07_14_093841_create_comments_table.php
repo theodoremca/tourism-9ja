@@ -19,6 +19,7 @@ class CreateCommentsTable extends Migration
             $table->unsignedBigInteger('user_id')->nullable();
             $table->string('image', 255)->nullable();
             $table->string('comment');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
