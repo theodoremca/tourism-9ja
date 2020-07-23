@@ -1,86 +1,7 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.app')
 
-        <!-- Bootstrap core CSS -->
-        <link href="{{ asset('css/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+@section('content')
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
-
-        <!-- ICONS -->
-        <link rel="stylesheet" href="{{ asset('css/icon-font.css') }}">
-        <link rel="shortcut icon" type="image/png" href="{{ asset('img/favicon.png') }}">
-
-        <!-- Styles -->
-        <link rel="stylesheet" href="{{ asset('sass/main.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/clean-blog.css') }}">
-
-        <title>TouristNaija</title>
-    </head>
-    <body>
-        <header class="header">
-            <div class="header__logo-box">
-                <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-                    <div class="container">
-                        <a class="navbar-brand" href="{{ route('home') }}">Home</a>
-                        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                            Menu
-                            <i class="fas fa-bars"></i>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarResponsive">
-                            <ul class="navbar-nav ml-auto">
-                                <li class="nav-item"><a class="nav-link" href="{{ route('blog') }}">Blog</a></li>
-                                <li class="nav-item"><a class="nav-link" href="{{ route('about') }}">About Us</a></li>
-                                <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">Login</a></li>
-                                <li class="nav-item"><a class="nav-link" href="{{ route('contact') }}">Contact</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
-
-
-                <!-- Navigation -->
-                {{-- <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-                    <div class="container">
-                        <a class="navbar-brand" href="home.php">Tourism Blog</a>
-                        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-                                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                            Menu
-                            <i class="fas fa-bars"></i>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarResponsive">
-                            <ul class="navbar-nav ml-auto">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('home') }}">Home</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">About</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="login.php">Login</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Contact</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav> --}}
-            </div>
-            <div class="header__text-box">
-                <h1 class="heading-primary">
-                    <span class="heading-primary--main">Tourist Naija</span>
-                    <span class="heading-primary--sub">Heart of Tourism</span>
-                </h1>
-                <a href="{{ route('login') }}" class="btn btn--white btn--animated">is where life happens</a>
-            </div>
-        </header>
-
-        <main>
             <section class="section-about">
                 <div class="u-center-text u-margin-bottom-big">
                     <h2 class="heading-secondary">Tourist Attractions</h2>
@@ -320,30 +241,6 @@
                     </div>
                 </div>
             </section>
-        </main>
-
-        <footer class="footer">
-            <div class="footer__logo-box">
-                <img src="{{ asset('img/logo-green-small-1x.png') }}" alt="full logo" class="footer__logo">
-                <p> TouristNaija</p>
-            </div>
-            <div class="row">
-                <div class="col-1-of-2">
-                    <div class="footer__navigation">
-                        <ul class="footer__list">
-                            <li class="footer__item"><a href="#" class="footer__link">About Us</a></li>
-                            <li class="footer__item"><a href="#" class="footer__link">Contact</a></li>
-                            <li class="footer__item"><a href="login.php" class="footer__link">SignUp / Login</a></li>
-                            <li class="footer__item"><a href="#" class="footer__link">Privacy policy</a></li>
-                            <li class="footer__item"><a href="#" class="footer__link">Others</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-1-of-2">
-                    <p class="footer__copyright">TouristNaija</p>
-                </div>
-            </div>
-        </footer>
 
         <div class="popup" id="popup">
             <div v class="popup__content">
@@ -369,5 +266,5 @@
                 </div>
             </div>
         </div>
-    </body>
-</html>
+
+@endsection
