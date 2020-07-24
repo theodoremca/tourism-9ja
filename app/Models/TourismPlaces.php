@@ -3,9 +3,11 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class TourismPlaces extends Model
 {
+    use SoftDeletes;
     protected $fillable = [
         'name', 'address', 'state', 'country', 'type', 'image',
     ];
@@ -21,4 +23,5 @@ class TourismPlaces extends Model
     public function sub_comments(){
         return $this->hasMany('App\SubComment');
     }
+
 }
