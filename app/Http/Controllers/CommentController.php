@@ -14,7 +14,8 @@ class CommentController extends Controller
      */
     public function index()
     {
-        //
+        $comments = Comment::all();
+        return view('comment.index', compact('comments'));
     }
 
     /**
@@ -24,7 +25,8 @@ class CommentController extends Controller
      */
     public function create()
     {
-        //
+        $comment = new Comment();
+        return view('comment.create', compact('comment'));
     }
 
     /**
@@ -35,7 +37,16 @@ class CommentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $comment = new Comment();
+        $validator = $comment->CommentValidator($request);
+        if ($validator->fails()) {
+            return back()->with('status','Comment created successfully.');
+        }
+        else{
+            $comment = Comment::create($request->all());
+        }
+
+        return view('comment.index', compact('comment'));
     }
 
     /**
@@ -46,7 +57,7 @@ class CommentController extends Controller
      */
     public function show(Comment $comment)
     {
-        //
+        return view('comment.show', compact('comment'));
     }
 
     /**
@@ -57,7 +68,7 @@ class CommentController extends Controller
      */
     public function edit(Comment $comment)
     {
-        //
+        return view('comment.edit', compact('comment'));
     }
 
     /**
@@ -69,7 +80,12 @@ class CommentController extends Controller
      */
     public function update(Request $request, Comment $comment)
     {
-        //
+        $validator = new Comment();
+        $validator->CommentValidator($request);
+
+        $comment->update($request->all());
+
+        return back()->with('status','Comment updated successfully.');
     }
 
     /**
@@ -80,6 +96,8 @@ class CommentController extends Controller
      */
     public function destroy(Comment $comment)
     {
-        //
+        $comment->delete();
+
+        return back()->with('status','Comment deleted successfully.');
     }
 }

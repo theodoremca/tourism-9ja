@@ -14,7 +14,8 @@ class TourismPlacesController extends Controller
      */
     public function index()
     {
-        //
+        $tourismPlacess = TourismPlaces::all();
+        return view('tourismPlaces.index', compact('tourismPlacess'));
     }
 
     /**
@@ -24,7 +25,8 @@ class TourismPlacesController extends Controller
      */
     public function create()
     {
-        //
+        $tourismPlaces = new TourismPlaces();
+        return view('tourismPlaces.create', compact('tourismPlaces'));
     }
 
     /**
@@ -35,7 +37,16 @@ class TourismPlacesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $tourismPlaces = new TourismPlaces();
+        $validator = $tourismPlaces->TourismPlacesValidator($request);
+        if ($validator->fails()) {
+            return back()->with('status','Created successfully.');
+        }
+        else{
+            $tourismPlaces = TourismPlaces::create($request->all());
+        }
+
+        return view('tourismPlaces.index', compact('tourismPlaces'));
     }
 
     /**
@@ -46,7 +57,7 @@ class TourismPlacesController extends Controller
      */
     public function show(TourismPlaces $tourismPlaces)
     {
-        //
+        return view('tourismPlaces.show', compact('tourismPlaces'));
     }
 
     /**
@@ -57,7 +68,7 @@ class TourismPlacesController extends Controller
      */
     public function edit(TourismPlaces $tourismPlaces)
     {
-        //
+        return view('tourismPlaces.edit', compact('tourismPlaces'));
     }
 
     /**
@@ -69,7 +80,12 @@ class TourismPlacesController extends Controller
      */
     public function update(Request $request, TourismPlaces $tourismPlaces)
     {
-        //
+        $validator = new TourismPlaces();
+        $validator->TourismPlacesValidator($request);
+
+        $tourismPlaces->update($request->all());
+
+        return back()->with('status','Updated successfully.');
     }
 
     /**
@@ -80,6 +96,8 @@ class TourismPlacesController extends Controller
      */
     public function destroy(TourismPlaces $tourismPlaces)
     {
-        //
+        $tourismPlaces->delete();
+
+        return back()->with('status','Deleted successfully.');
     }
 }
