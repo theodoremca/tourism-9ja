@@ -103,3 +103,89 @@ a {
         border-radius: 0px;
     }
 }
+
+/*<!----------Login styles--------------->*/
+.login_header {
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 30px;
+    font-family: monospace;
+}
+
+.row {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.login_label {
+    letter-spacing: 0.03em;
+    color: rgb(129, 129, 129);
+    font-size: 15px;
+}
+
+.row input {
+    border-bottom: 2px solid #818181 !important;
+    width: 100% !important;
+    border-top: hidden !important;
+    border-right: hidden !important;
+    border-left: hidden !important;
+    outline: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.forgot_password a {
+
+}
+.submit_details {
+    margin-right: auto !important;
+    margin-left: auto !important;
+
+}
+
+.submit_details button {
+    padding: 1rem;
+    margin-top: 1rem;
+    /*width: 20vw;*/
+    background: #7ed56f;
+
+}
+
+@media screen and (min-width: 906px) {
+    .submit_details button {
+        /*padding: 1rem;*/
+        /*margin-top: 1rem;*/
+        /*width: 20vw;*/
+        /*background: #7ed56f;*/
+        margin-left: 22rem;
+    }
+}
+@media screen and (min-width: 589px) {
+    .submit_details button {
+        padding: 1rem;
+        margin-top: 1rem;
+        width: 20vw;
+        background: #7ed56f;
+    }
+}
+
+
+@media screen and (min-width: 950px) {
+    .register small {
+        margin-left: 22rem;
+    }
+}
+
+.register small {
+    font-size: 10px;
+    letter-spacing: 1px
+}
+
+.register a {
+    color:#7ed56f !important;
+    cursor: pointer;
+}
+
+form {
+    margin-top:4rem;
+}
