@@ -51,7 +51,7 @@
                             {{--</div>--}}
                         {{--</div>--}}
                         <div class="form-group row mb-0 ">
-                            <div class="col-md-6 offset-md-6 forgot_password">
+                            <div class="col-md-6 offset-md-6 forgot_password text-sm-center">
 
                                 @if (Route::has('password.request'))
                                     <a class="btn btn-sm text-right mt-2"
@@ -67,7 +67,7 @@
                             </div>
                         </div>
                     </form>
-                    <div class="register text-center mt-5">
+                    <div class="register text-center mt-2">
                         <small> Don't have an account? <span><a class="" href= "{{route('register')}}">Register here</a></span></small>
 
                     </div>
