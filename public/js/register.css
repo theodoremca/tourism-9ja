@@ -92,7 +92,7 @@ input[type = "submit"]:focus
   background-position: center;
   position: relative;left:300px;
   position: relative;top:-600px;
-  float:left; 
+  float:left;
 }
 .right-box .loginbtn{
   display: block;
@@ -106,7 +106,7 @@ input[type = "submit"]:focus
   position: relative; left: 50px;
   position: relative; top:100px;
 
-  
+
 }
 .logbtn{
   background:#777;
@@ -126,4 +126,20 @@ input[type = "submit"]:focus
   border-color:white;
   border-style:solid;
   position: relative; left:50px;
+}
+
+
+/*NEw styles*/
+.register-header {
+    text-align: center !important;
+    padding: 2rem 0;
+    font-size: 30px;
+    font-family: monospace;
+}
+
+
+.label {
+    letter-spacing: 0.03em !important;
+    color: rgb(129, 129, 129) !important;
+    font-size: 15px !important;
 }

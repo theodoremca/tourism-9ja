@@ -51,10 +51,10 @@
                             {{--</div>--}}
                         {{--</div>--}}
                         <div class="form-group row mb-0 ">
-                            <div class="col-md-6 offset-md-6 forgot_password text-sm-center">
+                            <div class="col-md-6 offset-md-6 forgot_password forgot text-sm-center">
 
                                 @if (Route::has('password.request'))
-                                    <a class="btn btn-sm text-right mt-2"
+                                    <a class="btn btn-sm text-right mt-2 pass"
                                        href="{{ route('password.request') }}">
                                         {{ __('Forgot Your Password?') }}
                                     </a>

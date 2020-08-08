@@ -166,7 +166,6 @@ a {
     }
 }
 
-
 @media screen and (min-width: 950px) {
     .register small {
         margin-left: 22rem;
@@ -195,4 +194,35 @@ a {
 
 form {
     margin-top:4rem;
+}
+
+
+/*----------------------------------------Register styles--------------------------------------------------------------*/
+.register-header {
+    text-align: center !important;
+    padding: 2rem 0;
+    font-size: 30px;
+    font-family: monospace;
+}
+
+.register .label {
+    letter-spacing: 0.03em !important;
+    color: rgb(129, 129, 129) !important;
+    font-size: 15px !important;
+}
+
+.register .card-body{
+    width: 100%;
+}
+.card-body .row {
+    display: flex;
+    justify-content: space-around;
+}
+
+.register .row {
+    margin-bottom: 1.5rem !important;
+}
+
+.register form {
+    margin-top: 0 !important;
 }

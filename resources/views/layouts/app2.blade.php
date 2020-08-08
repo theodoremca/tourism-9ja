@@ -21,6 +21,8 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/login.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/register.css') }}" rel="stylesheet">
+
 
     <link rel="stylesheet" href="{{ asset('sass/main.css') }}">
     <link rel="stylesheet" href="{{ asset('css/clean-blog.css') }}">
