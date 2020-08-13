@@ -14,8 +14,7 @@ class ImageController extends Controller
      */
     public function index()
     {
-        $images = Image::all();
-        return view('image.index', compact('images'));
+        //
     }
 
     /**
@@ -25,8 +24,7 @@ class ImageController extends Controller
      */
     public function create()
     {
-        $image = new Image();
-        return view('image.create', compact('image'));
+        //
     }
 
     /**
@@ -37,16 +35,7 @@ class ImageController extends Controller
      */
     public function store(Request $request)
     {
-        $image = new Image();
-        $validator = $image->ImageValidator($request);
-        if ($validator->fails()) {
-            return back()->with('status','Image created successfully.');
-        }
-        else{
-            $image = Image::create($request->all());
-        }
-
-        return view('image.index', compact('image'));
+        //
     }
 
     /**
@@ -57,7 +46,7 @@ class ImageController extends Controller
      */
     public function show(Image $image)
     {
-        return view('image.show', compact('image'));
+        //
     }
 
     /**
@@ -68,7 +57,7 @@ class ImageController extends Controller
      */
     public function edit(Image $image)
     {
-        return view('image.edit', compact('image'));
+        //
     }
 
     /**
@@ -80,12 +69,7 @@ class ImageController extends Controller
      */
     public function update(Request $request, Image $image)
     {
-        $validator = new Image();
-        $validator->ImageValidator($request);
-
-        $image->update($request->all());
-
-        return back()->with('status','Image updated successfully.');
+        //
     }
 
     /**
@@ -96,8 +80,6 @@ class ImageController extends Controller
      */
     public function destroy(Image $image)
     {
-        $image->delete();
-
-        return back()->with('status','Image deleted successfully.');
+        //
     }
 }

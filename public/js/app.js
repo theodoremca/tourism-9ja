@@ -32826,12 +32826,9 @@ return jQuery;
      * `srcValue` values against any array or object value, respectively. See
      * `_.isEqual` for a list of supported value comparisons.
      *
-<<<<<<< HEAD
-=======
      * **Note:** Multiple values can be checked by combining several matchers
      * using `_.overSome`
      *
->>>>>>> feat/migrationsAndModels
      * @static
      * @memberOf _
      * @since 3.2.0
@@ -37277,7 +37274,7 @@ module.exports = function(module) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
+__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js"); // const
 
 /***/ }),
 
@@ -37344,8 +37341,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\laragon\www\tourismnaija\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\laragon\www\tourismnaija\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/AXBAXXAAXX/Documents/tourismnaija/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/AXBAXXAAXX/Documents/tourismnaija/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
