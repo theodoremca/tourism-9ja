@@ -18,7 +18,7 @@
         <!-- Custom styles for this template -->
         <link href="{{ asset('css/clean-blog.css') }}" rel="stylesheet">
 
-        <title>TouristNaija</title>
+        <title>{{ config('app.name', 'Toursim Naija') }}</title>
     </head>
 
     <body>

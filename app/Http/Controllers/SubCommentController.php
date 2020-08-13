@@ -14,8 +14,7 @@ class SubCommentController extends Controller
      */
     public function index()
     {
-        $subComments = SubComment::all();
-        return view('subComment.index', compact('subComments'));
+        //
     }
 
     /**
@@ -25,8 +24,7 @@ class SubCommentController extends Controller
      */
     public function create()
     {
-        $subComment = new SubComment();
-        return view('subComment.create', compact('subComment'));
+        //
     }
 
     /**
@@ -37,16 +35,7 @@ class SubCommentController extends Controller
      */
     public function store(Request $request)
     {
-        $subComment = new SubComment();
-        $validator = $subComment->SubCommentValidator($request);
-        if ($validator->fails()) {
-            return back()->with('status','Comment created successfully.');
-        }
-        else{
-            $subComment = SubComment::create($request->all());
-        }
-
-        return view('subComment.index', compact('subComment'));
+        //
     }
 
     /**
@@ -57,7 +46,7 @@ class SubCommentController extends Controller
      */
     public function show(SubComment $subComment)
     {
-        return view('subComment.show', compact('subComment'));
+        //
     }
 
     /**
@@ -68,7 +57,7 @@ class SubCommentController extends Controller
      */
     public function edit(SubComment $subComment)
     {
-        return view('subComment.edit', compact('subComment'));
+        //
     }
 
     /**
@@ -80,12 +69,7 @@ class SubCommentController extends Controller
      */
     public function update(Request $request, SubComment $subComment)
     {
-        $validator = new SubComment();
-        $validator->SubCommentValidator($request);
-
-        $subComment->update($request->all());
-
-        return back()->with('status','Comment updated successfully.');
+        //
     }
 
     /**
@@ -96,8 +80,6 @@ class SubCommentController extends Controller
      */
     public function destroy(SubComment $subComment)
     {
-        $subComment->delete();
-
-        return back()->with('status','Comment deleted successfully.');
+        //
     }
 }
