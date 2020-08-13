@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::get('/footer', function () {
+    return view('layouts.footer');
+});
+
 Auth::routes();
 
 Route::group(['middleware' => 'auth'], function () {

@@ -150,10 +150,6 @@ a {
 
 @media screen and (min-width: 906px) {
     .submit_details button {
-        /*padding: 1rem;*/
-        /*margin-top: 1rem;*/
-        /*width: 20vw;*/
-        /*background: #7ed56f;*/
         margin-left: 22rem;
     }
 }

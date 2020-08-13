@@ -1,0 +1,9 @@
+.page-footer {
+    background: linear-gradient(to right, #7ed56f, #28b485);
+    font-size: 14px;
+}
+
+.page-footer a {
+    color: black;
+    text-decoration: none;
+}
