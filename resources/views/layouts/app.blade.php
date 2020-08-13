@@ -19,8 +19,11 @@
     <link href="{{ asset('css/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- Styles -->
+    <link href="{{ asset('css/tourismPage.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/footer.css') }}" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    {{-- <link rel="stylesheet" href="{{ asset('sass/main.css') }}"> --}}
+
+{{-- <link rel="stylesheet" href="{{ asset('sass/main.css') }}"> --}}
     {{-- <link rel="stylesheet" href="{{ asset('css/clean-blog.css') }}"> --}}
 
 
@@ -54,10 +57,11 @@
                 </div>
             </div>
         </header>
-        <main class="py-4">
-            {{-- @yield('content') --}}
+        <main class="py-4 px-5">
+             @yield('content')
         </main>
 
+        @include('layouts.footer')
     </div>
 </body>
     <script src="{{ asset('js/app.js') }}"></script>

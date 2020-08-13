@@ -1,0 +1,31 @@
+.sub-header {
+    display: flex;
+    justify-content: space-around;
+}
+
+.sub-header .card {
+    border: none !important;
+}
+
+.tourism-image {
+    content: url("/images/card-image.jpg");
+}
+.lifestyle-image {
+    content: url("/images/card-image.jpg");
+}
+.culture-image {
+    content: url("/images/card-image.jpg");
+}
+.dest-image {
+    content: url("/images/card-image.jpg");
+}
+
+/*.blog-news {*/
+    /*display: flex !important;*/
+
+/*}*/
+
+/*.blog-news .blog {*/
+    /*text-align: center;*/
+    /*margin-left: 40rem;*/
+/*}*/
