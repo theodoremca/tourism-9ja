@@ -1,5 +1,6 @@
 .page-footer {
-    background: linear-gradient(to right, #7ed56f, #28b485) !important;
+    /*background: linear-gradient(to right, #7ed56f, #28b485) !important;*/
+    background: #38c172;
     font-size: 14px;
 }
 

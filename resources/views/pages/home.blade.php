@@ -63,26 +63,6 @@
     </div>
 
     <div class="blog-news row pt-5">
-        {{--<div class="latest-news">--}}
-        {{--<h4>Latest News</h4>--}}
-
-        {{--<ul class="list-unstyled">--}}
-        {{--<li>abcd</li>--}}
-        {{--<li>abcd</li>--}}
-
-        {{--</ul>--}}
-
-        {{--</div>--}}
-
-        {{--<div class="blog">--}}
-        {{--<h4>Latest Blog Updates</h4>--}}
-
-        {{--<ul class="list-unstyled">--}}
-        {{--<li>--}}
-        {{--abcd--}}
-        {{--</li>--}}
-        {{--</ul>--}}
-        {{--</div>--}}
 
         <div class="col-md-6 col-sm-4">
             <div class="latest-news">

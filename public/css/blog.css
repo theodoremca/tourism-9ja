@@ -1,0 +1,63 @@
+.post-preview > a {
+    color: #212529;
+}
+
+.post-preview > a:focus, .post-preview > a:hover {
+    text-decoration: none;
+    color: green;
+}
+
+.post-preview > a > .post-title {
+    font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.post-preview > a > .post-subtitle {
+    font-weight: 300;
+    margin: 0 0 10px;
+}
+
+.post-preview > .post-meta {
+    font-size: 18px;
+    font-style: italic;
+    margin-top: 0;
+    color: #868e96;
+}
+
+.post-preview > .post-meta > a {
+    text-decoration: none;
+    color: #212529;
+}
+
+.text-muted {
+    text-align: center;
+}
+
+
+
+.clearfix .btn {
+    font-size: 14px;
+    font-weight: 800;
+    padding: 15px 25px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 0;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.clearfix .btn-primary {
+    background-color: #0085A1;
+    border-color: #0085A1;
+}
+
+.clearfix .btn-primary:hover, .clearfix .btn-primary:focus, .clearfix .btn-primary:active {
+    color: #fff;
+    background-color: #00657b !important;
+    border-color: #00657b !important;
+}
+
+.clearfix .btn-lg {
+    font-size: 16px;
+    padding: 25px 35px;
+}

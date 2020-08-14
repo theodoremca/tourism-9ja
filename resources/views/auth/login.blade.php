@@ -1,4 +1,4 @@
-@extends('layouts.app2')
+@extends('layouts.app_blog')
 
 @section('content')
 <div class="container">
@@ -11,8 +11,8 @@
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 text-md-right login_label">{{ __('E-Mail Address') }}</label>
+                        <div class="form-group pb-5 row">
+                            <label for="email" class="col-md-4 login_label">{{ __('E-Mail Address') }}</label>
 
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
@@ -25,8 +25,8 @@
                             </div>
                         </div>
 
-                        <div class="form-group row" style="margin-bottom:4rem">
-                            <label for="email" class="col-md-4 text-md-right login_label">{{ __('Password') }}</label>
+                        <div class="form-group row">
+                            <label for="email" class="col-md-4 login_label">{{ __('Password') }}</label>
 
                             <div class="col-md-6">
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
@@ -51,7 +51,7 @@
                             {{--</div>--}}
                         {{--</div>--}}
                         <div class="form-group row mb-0 ">
-                            <div class="col-md-6 offset-md-6 forgot_password forgot text-sm-center">
+                            <div class="col-md-7 offset-md-5 forgot_password forgot text-sm-center">
 
                                 @if (Route::has('password.request'))
                                     <a class="btn btn-sm text-right mt-2 pass"
@@ -67,7 +67,7 @@
                             </div>
                         </div>
                     </form>
-                    <div class="register text-center mt-2">
+                    <div class="register text-center mt-2" style="    margin-left: 8rem !important;">
                         <small> Don't have an account? <span><a class="" href= "{{route('register')}}">Register here</a></span></small>
 
                     </div>

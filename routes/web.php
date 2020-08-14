@@ -14,11 +14,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/', function () {
-    return view('home');
+    return view('pages.home');
 });
 
 Route::get('/footer', function () {
     return view('layouts.footer');
+});
+
+Route::get('/blog_page', function () {
+    return view('pages.blog_page');
 });
 
 Auth::routes();
@@ -66,10 +70,10 @@ Route::group(['middleware' => 'auth'], function () {
 
 });
 
-Route::view('/blog', 'blog')->name('blog');
+Route::view('/blog', 'pages.blog')->name('blog');
 Route::view('/about', 'about')->name('about');
 Route::view('/login', 'login')->name('login');
 Route::view('/contact', 'contact')->name('contact');
-Route::view('/tourismpage', 'tourismpage')->name('tourismpage');
+Route::view('/home', 'pages.home')->name('home');
 
 Auth::routes();
