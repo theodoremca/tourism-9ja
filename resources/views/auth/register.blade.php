@@ -1,9 +1,9 @@
-@extends('layouts.app2')
+@extends('layouts.app_blog')
 
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-8">
+            <div class="col-md-10">
                 <div class="register">
                     <div class="register-header">{{ __('Register') }}</div>
 
@@ -14,7 +14,7 @@
                             <div class="form-group row">
                                 <div class="firstName">
                                     <label for="firstName"
-                                           class="col-md-4 col-form-label pl-0 pr-0 label">{{ __('First Name') }}</label>
+                                           class="col-form-label pl-0 pr-0 label">{{ __('First Name') }}</label>
 
 
                                     <input id="name" type="text"
@@ -29,9 +29,9 @@
                                     @enderror
 
                                 </div>
-                                <div class="lastName ml-5">
+                                <div class="lastName">
                                     <label for="lastName"
-                                           class="col-md-4 col-form-label pl-0 pr-0 label">{{ __('Last Name') }}</label>
+                                           class="col-form-label pl-0 pr-0 label">{{ __('Last Name') }}</label>
 
 
                                     <input id="name" type="text"
@@ -51,7 +51,7 @@
                             <div class="form-group row">
                                 <div class="email">
                                     <label for="email"
-                                           class="col-md-4 col-form-label label pl-0 pr-0">{{ __('E-Mail Address') }}</label>
+                                           class="col-form-label label pl-0 pr-0">{{ __('E-Mail Address') }}</label>
 
                                     <input id="email" type="email"
                                            class="form-control @error('email') is-invalid @enderror" name="email"
@@ -63,9 +63,9 @@
                                     </span>
                                     @enderror
                                 </div>
-                                <div class="email ml-4">
+                                <div class="email">
                                     <label for="email"
-                                           class="col-md-4 col-form-label pl-0 pr-0 label">{{ __('E-Mail Address') }}</label>
+                                           class="col-form-label pl-0 pr-0 label">{{ __('E-Mail Address') }}</label>
 
                                     <input id="email" type="email"
                                            class="form-control @error('email') is-invalid @enderror" name="email"
@@ -83,7 +83,7 @@
                             <div class="form-group row">
                                 <div class="password">
                                     <label for="password"
-                                           class="col-md-4 col-form-label pl-0 pr-0 label">{{ __('Password') }}</label>
+                                           class="col-form-label pl-0 pr-0 label">{{ __('Password') }}</label>
 
                                     <input id="password" type="password"
                                            class="form-control @error('password') is-invalid @enderror" name="password"
@@ -97,7 +97,7 @@
                                 </div>
                                 <div class="confirmPassword">
                                     <label for="password-confirm"
-                                           class="col-md-4 col-form-label label">{{ __('Confirm Password') }}</label>
+                                           class="col-form-label label">{{ __('Confirm Password') }}</label>
 
 
                                     <input id="password-confirm" type="password" class="form-control"
@@ -111,7 +111,7 @@
                             <div class="form-group row">
                                 <div class="state">
                                     <label for="state"
-                                           class="col-md-4 col-form-label pl-0 pr-0 label">{{ __('State of Origin') }}</label>
+                                           class="col-form-label pl-0 pr-0 label">{{ __('State of Origin') }}</label>
 
 
                                     <input id="state" type="text"
@@ -124,9 +124,9 @@
                                     </span>
                                     @enderror
                                 </div>
-                                <div class="tribe ml-5">
+                                <div class="tribe">
                                     <label for="tribe"
-                                           class="col-md-4 col-form-label pl-0 pr-0 label">{{ __('Tribe') }}</label>
+                                           class="col-form-label pl-0 pr-0 label">{{ __('Tribe') }}</label>
 
                                     <input id="tribe" type="text"
                                            class="form-control @error('tribe') is-invalid @enderror" name="tribe"

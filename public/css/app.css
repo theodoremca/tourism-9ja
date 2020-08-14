@@ -10957,7 +10957,7 @@ body h6 {
 
 body header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/hero.jpg?6e09f4102b0d64adc38d21bd9c89a9a7);
-  height: 40vh;
+  height: 28vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -11037,12 +11037,13 @@ body header .hero-text {
 
 body header .hero-text h1 {
   font-weight: 700;
-  font-size: 6rem;
+    font-size: 2rem;
+    padding-top: 2rem;
 }
 
 body header .hero-text h2 {
   font-weight: 700;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 @media (max-width: 450px) {

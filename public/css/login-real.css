@@ -37,7 +37,7 @@
 }
 
 .submit_details button {
-    padding: 1rem;
+    padding: 9px;
     margin-top: 1rem;
     width: 21vw;
     background: #7ed56f;
@@ -87,4 +87,33 @@
 
 form {
     margin-top:1rem;
+}
+
+/*----------------------------------------Register styles--------------------------------------------------------------*/
+.register-header {
+    text-align: center !important;
+    font-size: 30px;
+    font-family: monospace;
+}
+
+.register .label {
+    letter-spacing: 0.03em !important;
+    color: rgb(129, 129, 129) !important;
+    font-size: 15px !important;
+}
+
+.register .card-body{
+    width: 100%;
+}
+.card-body .row {
+    display: flex;
+    justify-content: space-around;
+}
+
+.register .row {
+
+}
+
+.register form {
+    margin-top: 0 !important;
 }
