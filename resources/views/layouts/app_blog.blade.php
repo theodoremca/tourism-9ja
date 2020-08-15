@@ -22,6 +22,7 @@
     <link href="{{ asset('css/tourismPage.css') }}" rel="stylesheet">
     <link href="{{ asset('css/footer.css') }}" rel="stylesheet">
     <link href="{{ asset('css/login-real.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/UserProfile.css') }}" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
  {{--<link rel="stylesheet" href="{{ asset('sass/main.css') }}">--}}

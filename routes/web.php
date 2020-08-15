@@ -75,5 +75,7 @@ Route::view('/about', 'about')->name('about');
 Route::view('/login', 'login')->name('login');
 Route::view('/contact', 'contact')->name('contact');
 Route::view('/home', 'pages.home')->name('home');
+Route::view('/user', 'pages.UserProfile')->name('user');
+
 
 Auth::routes();
