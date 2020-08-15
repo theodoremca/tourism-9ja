@@ -21,9 +21,7 @@ Route::get('/footer', function () {
     return view('layouts.footer');
 });
 
-Route::get('/blog_page', function () {
-    return view('pages.blog_page');
-});
+
 
 Auth::routes();
 
@@ -76,6 +74,8 @@ Route::view('/login', 'login')->name('login');
 Route::view('/contact', 'contact')->name('contact');
 Route::view('/home', 'pages.home')->name('home');
 Route::view('/user', 'pages.UserProfile')->name('user');
+Route::view('/contact', 'pages.ContactUs')->name('contact');
+
 
 
 Auth::routes();

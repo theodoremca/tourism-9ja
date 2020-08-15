@@ -3,12 +3,10 @@
 @section('content')
 
 
-
-
 <div class="wrapper">
     <div class="main">
         <div class="main-header">
-            {{--<span class="title">User Profile</span>--}}
+            <span class="title">User Profile</span>
         </div>
     </div>
 

@@ -23,12 +23,27 @@
     <link href="{{ asset('css/footer.css') }}" rel="stylesheet">
     <link href="{{ asset('css/login-real.css') }}" rel="stylesheet">
     <link href="{{ asset('css/UserProfile.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/contact-us.css') }}" rel="stylesheet">
+
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
  {{--<link rel="stylesheet" href="{{ asset('sass/main.css') }}">--}}
  <link rel="stylesheet" href="{{ asset('css/blog.css') }}">
 
 {{-- <link rel="stylesheet" href="{{ asset('css/clean-blog.css') }}">--}}
+
+    {{--<-----------Contact Us styles------------------>--}}
+    <link href="{{ asset('css/util.css') }}" rel="stylesheet">
+
+    <link href="{{ asset('css/contact-us.css') }}" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+{{--<-----------Contact Us styles------------------>--}}
+
 
 
 <!-- ICONS -->
