@@ -15,7 +15,6 @@
         <link rel="stylesheet" href="{{ asset('css/login.css') }}">
         <link rel="stylesheet" href="{{ asset('css/clean-blog.css') }}">
 
-        <title>TouristNaija : Login</title>
     </head>
 
     <body>
