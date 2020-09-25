@@ -44,16 +44,43 @@
                         <li><a href="{{ route('blog') }}">blog</a></li>
                         <li><a href="{{ route('about') }}">about</a></li>
                         <li><a href="{{ route('contact') }}">contact</a></li>
+                        @guest
+                            <li>
+                                <a href="{{ route('login') }}">{{ __('Login') }}</a>
+                            </li>
+                            @if (Route::has('register'))
+                                <li>
+                                    <a href="{{ route('register') }}">{{ __('Register') }}</a>
+                                </li>
+                            @endif
+                        @else
+                            <li>
+                                <a id="navbarDropdown" class="dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->first_name }} <span class="caret"></span>
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item text-dark" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                        @endguest
                     </ul>
                     <div class="hamburger">&nbsp;</div>
 
                 </div>
             </nav>
-            <div class="container">
+            <div class="container mt-2">
                 <div class="hero-text">
                     <h1>Tourist Naija</h1>
                     <h2>Heart of Tourism</h2>
-
                 </div>
             </div>
         </header>

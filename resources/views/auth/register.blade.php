@@ -10,35 +10,34 @@
                     <div class="card-body">
                         <form method="POST" action="{{ route('register') }}">
                             @csrf
-
                             <div class="form-group row">
-                                <div class="firstName">
-                                    <label for="firstName"
+                                <div class="first_name">
+                                    <label for="first_name"
                                            class="col-form-label pl-0 pr-0 label">{{ __('First Name') }}</label>
 
 
                                     <input id="name" type="text"
-                                           class="form-control @error('firstName') is-invalid @enderror"
-                                           name="firstName" value="{{ old('firstName') }}" required
-                                           autocomplete="firstName" autofocus>
+                                           class="form-control @error('first_name') is-invalid @enderror"
+                                           name="first_name" value="{{ old('first_name') }}" required
+                                           autocomplete="first_name" autofocus>
 
-                                    @error('name')
+                                    @error('first_name')
                                     <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
                                 </span>
                                     @enderror
 
                                 </div>
-                                <div class="lastName">
-                                    <label for="lastName"
+                                <div class="last_name">
+                                    <label for="last_name"
                                            class="col-form-label pl-0 pr-0 label">{{ __('Last Name') }}</label>
 
 
                                     <input id="name" type="text"
-                                           class="form-control @error('lastName') is-invalid @enderror" name="lastName"
-                                           value="{{ old('lastName') }}" required autocomplete="lastName" autofocus>
+                                           class="form-control @error('last_name') is-invalid @enderror" name="last_name"
+                                           value="{{ old('last_name') }}" required autocomplete="last_name" autofocus>
 
-                                    @error('name')
+                                    @error('last_name')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -63,15 +62,15 @@
                                     </span>
                                     @enderror
                                 </div>
-                                <div class="email">
-                                    <label for="email"
-                                           class="col-form-label pl-0 pr-0 label">{{ __('E-Mail Address') }}</label>
+                                <div class="nationality">
+                                    <label for="nationality"
+                                           class="col-form-label pl-0 pr-0 label">{{ __('Nationality') }}</label>
 
-                                    <input id="email" type="email"
-                                           class="form-control @error('email') is-invalid @enderror" name="email"
-                                           value="{{ old('email') }}" required autocomplete="email">
+                                    <input id="nationality" type="nationality"
+                                           class="form-control @error('nationality') is-invalid @enderror" name="nationality"
+                                           value="{{ old('nationality') }}" required autocomplete="nationality">
 
-                                    @error('email')
+                                    @error('nationality')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>

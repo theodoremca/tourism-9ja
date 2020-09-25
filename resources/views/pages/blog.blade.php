@@ -76,7 +76,7 @@
     <div class="row pt-3">
         <div class="col-lg-8 col-md-10 mx-auto">
             <div class="post-preview">
-                <a href="post.html">
+                <a href="/blog/{1}">
                     <h2 class="post-title font-weight-bold" >
                         Man must explore, and this is exploration at its greatest
                     </h2>
@@ -90,7 +90,7 @@
             </div>
             <hr>
             <div class="post-preview">
-                <a href="post.html">
+                <a href="/blog/{1}">
                     <h2 class="post-title font-weight-bold">
                         I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.
                     </h2>
@@ -101,7 +101,7 @@
             </div>
             <hr>
             <div class="post-preview">
-                <a href="post.html">
+                <a href="/blog/{1}">
                     <h2 class="post-title font-weight-bold">
                         Science has not yet mastered prophecy
                     </h2>
@@ -115,7 +115,7 @@
             </div>
             <hr>
             <div class="post-preview">
-                <a href="post.html">
+                <a href="/blog/{1}">
                     <h2 class="post-title font-weight-bold">
                         Failure is not an option
                     </h2>
