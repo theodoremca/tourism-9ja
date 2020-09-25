@@ -8,9 +8,9 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Scripts -->
- <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/app.js') }}" defer></script>
 
-<!-- Fonts -->
+    <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
@@ -27,10 +27,10 @@
 
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
- {{--<link rel="stylesheet" href="{{ asset('sass/main.css') }}">--}}
- <link rel="stylesheet" href="{{ asset('css/blog.css') }}">
+    {{--<link rel="stylesheet" href="{{ asset('sass/main.css') }}">--}}
+    <link rel="stylesheet" href="{{ asset('css/blog.css') }}">
 
-{{-- <link rel="stylesheet" href="{{ asset('css/clean-blog.css') }}">--}}
+    {{-- <link rel="stylesheet" href="{{ asset('css/clean-blog.css') }}">--}}
 
     {{--<-----------Contact Us styles------------------>--}}
     <link href="{{ asset('css/util.css') }}" rel="stylesheet">
@@ -45,8 +45,8 @@
 
 
 <!-- ICONS -->
-     <link rel="stylesheet" href="{{ asset('css/icon-font.css') }}">
-     <link rel="shortcut icon" type="image/png" href="{{ asset('img/favicon.png') }}">
+    <link rel="stylesheet" href="{{ asset('css/icon-font.css') }}">
+    <link rel="shortcut icon" type="image/png" href="{{ asset('img/favicon.png') }}">
 
     <title>{{ config('app.name', 'Tourism Naija') }}</title>
 </head>
@@ -61,41 +61,13 @@
                     <li><a href="{{ route('blog') }}">blog</a></li>
                     <li><a href="{{ route('about') }}">about</a></li>
                     <li><a href="{{ route('contact') }}">contact</a></li>
-                    @guest
-                        <li>
-                            <a href="{{ route('login') }}">{{ __('Login') }}</a>
-                        </li>
-                        @if (Route::has('register'))
-                            <li>
-                                <a href="{{ route('register') }}">{{ __('Register') }}</a>
-                            </li>
-                        @endif
-                    @else
-                        <li>
-                            <a id="navbarDropdown" class="dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                {{ Auth::user()->first_name }} <span class="caret"></span>
-                            </a>
-
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item text-dark" href="{{ route('logout') }}"
-                                    onclick="event.preventDefault();
-                                                    document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
-                                </a>
-
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                    @csrf
-                                </form>
-                            </div>
-                        </li>
-                    @endguest
                 </ul>
                 <div class="hamburger">&nbsp;</div>
 
             </div>
         </nav>
         <div class="container">
-            <div class="hero-text mt-2">
+            <div class="hero-text">
                 <h1>Tourist Naija</h1>
                 <h2>Heart of Tourism</h2>
 
