@@ -77,6 +77,7 @@ Route::view('/home', 'pages.home')->name('home');
 Route::view('/user', 'pages.UserProfile')->name('user');
 Route::view('/contact', 'pages.ContactUs')->name('contact');
 Route::view('/blog-page', 'pages.blogPage')->name('blog-page');
+// Route::view('/blog-page', 'pages.blogPage')->name('blog-page');
 
 
 
