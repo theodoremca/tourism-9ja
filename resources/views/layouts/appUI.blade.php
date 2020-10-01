@@ -27,10 +27,10 @@
                         <div class="col-md-8 col-sm-6 col-xs-12 floatright">
                             <div class="header-top-right">
                                 <div class="login ">
-                                    <a href="#"><i class="fa fa-pencil-square-o"></i>Register</a>
+                                    <a href="{{ route('sign-in') }}"><i class="fa fa-pencil-square-o"></i>Register</a>
                                 </div>
                                 <div class="account">
-                                    <a href="signin.html"><i class="fa fa-lock"></i>sign In</a>
+                                    <a href="{{ route('sign-in') }}"><i class="fa fa-lock"></i>sign In</a>
                                 </div>
                             </div>
                         </div>
@@ -92,7 +92,7 @@
         </header>
         @yield('content')
         @include('layouts.footer')
-        
+
     <script src="{{ asset('uiFix/js/vendor/jquery-1.11.3.min.js') }}"></script>
     <script src="{{ asset('uiFix/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('uiFix/lib/nivo-slider/js/jquery.nivo.slider.js') }}"></script>

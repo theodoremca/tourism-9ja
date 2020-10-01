@@ -71,7 +71,7 @@ Route::group(['middleware' => 'auth'], function () {
 Route::get('/blog', 'BlogController@index')->name('blog');
 Route::get('/blog/{id}', 'BlogController@show')->name('blog.show');
 Route::view('/about', 'about')->name('about');
-// Route::view('/login', 'login')->name('login');
+ Route::view('/sign-in', 'sign-in')->name('sign-in');
 Route::view('/contact', 'contact')->name('contact');
 Route::view('/home', 'pages.home')->name('home');
 Route::view('/user', 'pages.UserProfile')->name('user');
