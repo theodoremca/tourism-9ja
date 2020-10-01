@@ -82,7 +82,11 @@
                                 <nav id="dropdown">
                                     <ul>
                                         <li><a href="{{ route('home') }}">HOME</a></li>
-                                        <li><a href="#about">ABOUT</a>
+                                        @if(Route::current()->getName() === 'home')
+                                            <li><a href="#about">About</a></li>
+                                        @else
+                                            <li><a href="{{ route('home') }}#about">About</a></li>
+                                        @endif
                                         <li><a href="{{ route('blog') }}">Blog</a></li>
                                         <li><a href="{{ route('contact') }}">CONTACT</a></li>
                                     </ul>
