@@ -62,11 +62,11 @@
                         <h4 class="blog-title">User <span>Comments</span></h4>
                         <div class="single-comment">
                             <div class="author-image">
-                                <img src="img/blog/author-1.jpg" alt="">
+                                <img src="{{asset('uiFix/img/blog/author-1.jpg')}}" alt="">
                             </div>
                             <div class="comment-text">
                                 <div class="author-info">
-                                    <h4><a href="#">Watson</a></h4>
+                                    <h4><a href="#">Laycon</a></h4>
                                     <span class="reply"><a href="#"><i class="fa fa-reply"></i>Reply</a></span>
                                     <span class="comment-time">45 Minutes Ago</span>
                                 </div>
@@ -75,11 +75,11 @@
                         </div>
                         <div class="single-comment comment-reply">
                             <div class="author-image">
-                                <img src="img/blog/author-2.jpg" alt="">
+                                <img src="{{asset('uiFix/img/blog/author-2.jpg')}}" alt="">
                             </div>
                             <div class="comment-text">
                                 <div class="author-info">
-                                    <h4><a href="#">Maria</a></h4>
+                                    <h4><a href="#">Nengi</a></h4>
                                     <span class="reply"><a href="#"><i class="fa fa-reply"></i>Reply</a></span>
                                     <span class="comment-time">8 Minutes Ago</span>
                                 </div>
@@ -88,11 +88,11 @@
                         </div>
                         <div class="single-comment">
                             <div class="author-image">
-                                <img src="img/blog/author-1.jpg" alt="">
+                                <img src="{{asset('uiFix/img/blog/author-1.jpg')}}" alt="">
                             </div>
                             <div class="comment-text">
                                 <div class="author-info">
-                                    <h4><a href="#">Watson</a></h4>
+                                    <h4><a href="#">Laycon</a></h4>
                                     <span class="reply"><a href="#"><i class="fa fa-reply"></i>Reply</a></span>
                                     <span class="comment-time">10 Minutes Ago</span>
                                 </div>
