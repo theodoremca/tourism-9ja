@@ -1,6 +1,6 @@
-@extends('layouts.app_blog')
+@extends('layouts.appUI')
 
-@section('content')
+@section('content1')
 
 
 <div class="wrapper">
@@ -147,4 +147,60 @@
     </div>
 </div>
 
+@endsection
+@section('content')
+    <div class="banner-area signin-banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title text-center">
+                        <div class="title-border">
+                            <h1>Profile<span> page</span></h1>
+                        </div>
+                        <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dolor turpis, pulvinar varius dui<br> id, convallis iaculis eros. Praesent porta lacinia elementum.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <ul class="breadcrumb">
+                        <li><a href="index.html">User</a></li>
+                        <li>Profile</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sign-in-area section-padding">
+        <div class="container">
+            <div class="row">
+
+                    <div class="section-title text-center title-right">
+                        <div class="title-border">
+                            <h1> User Profile  <span>Page</span></h1>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dolor turpis, pulvinar varius dui id, convallis iaculis eros. Praesent porta lacinia elementum.</p>
+                    </div>
+                    <div class="sign-up-form">
+                        <form action="https://designermachinefonts.net/dm/html/adventure/adventures/mail.php" method="post">
+                            <div class="col-md-6">
+                            <input name="email" type="text" class="form-box required" placeholder="First Name">
+                            <input name="email" type="text" class="form-box required" placeholder="Last Name">
+                            <input name="email" type="text" class="form-box required" placeholder="Tribe">
+                            <input name="email" type="text" class="form-box required" placeholder="State of Origin">
+                            </div>
+                            <div class="col-md-6">
+                            <input name="email" type="text" class="form-box required" placeholder="Nationality">
+                            <input name="email" type="email" class="form-box required" placeholder="Email Address">
+                            <input type="password" name="psw" class="form-box" placeholder="Password">
+                            <input type="password" name="re-psw" class="form-box" placeholder="Repeat Password">
+                            </div>
+                            <input type="submit" class="submit-button" value="Save">
+
+                        </form>
+                    </div>
+                </div>
+
+        </div>
+    </div>
 @endsection

@@ -50,12 +50,8 @@
                         <div class="blog-button-links">
                             <span class="blog-tags">Tags: <a href="#">rock,</a> <a href="#">river,</a> <a href="#">Dress,</a> <a href="#">animal</a></span>
                             <div class="blog-links">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-google-plus"></i></a>
-                                <a href="#"><i class="fa fa-linkedin"></i></a>
-                                <a href="#"><i class="fa fa-rss"></i></a>
-                            </div>
+{{--                                this button will show for only authorized users--}}
+                                <button  class="comment-btn" value="">Edit Post</button>
                         </div>
                     </div>
                     <div class="blog-comments">
@@ -98,6 +94,7 @@
                                 </div>
                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled .</p>
                             </div>
+
                         </div>
                     </div>
                     <div class="leave-comment">
