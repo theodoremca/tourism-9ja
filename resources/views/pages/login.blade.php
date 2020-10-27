@@ -53,8 +53,8 @@
         <input class="un " type="text" placeholder="Username" autocomplete="off">
         <input class="pass" type="password" placeholder="Password">
         <a class="submit">Sign in</a>
-        <p class="forgot"><a href="#">Forgot Password?</p>
-
+        <p class="forgot"><a href="#">Forgot Password?</a></p>
+    </form>
 
 </div>
 

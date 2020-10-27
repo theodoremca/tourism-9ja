@@ -68,7 +68,7 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dolor turpis, pulvinar varius dui id, convallis iaculis eros. Praesent porta lacinia elementum.</p>
                     </div>
                     <div class="sign-up-form">
-                        <form action="https://designermachinefonts.net/dm/html/adventure/adventures/mail.php" method="post">
+                        <form method="POST" action="{{ route('register') }}">>
                             <input name="email" type="text" class="form-box required" placeholder="First Name">
                             <input name="email" type="text" class="form-box required" placeholder="Last Name">
                             <input name="email" type="text" class="form-box required" placeholder="Tribe">

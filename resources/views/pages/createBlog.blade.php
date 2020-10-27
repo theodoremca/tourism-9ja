@@ -18,7 +18,7 @@
                 <div class="col-md-12 text-center">
                     <ul class="breadcrumb">
                         <li><a href="index.html">Create</a></li>
-                        <li>Blog</li>
+                        <li>Blo</li>
                     </ul>
                 </div>
             </div>
