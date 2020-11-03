@@ -36,7 +36,8 @@
                         </div>
                     </div>
                     <div class="sign-in-container">
-                        <form action="https://designermachinefonts.net/dm/html/adventure/adventures/mail.php" method="post" id="signin">
+                        <form method="POST" action="{{ route('login') }}" id="signin">
+                            @csrf
                             <div class="sign-in-buttons">
                                 <div class="row">
                                     <div class="col-md-6 col-sm-6">
@@ -49,7 +50,21 @@
                             </div>
                             <div class="sign-in-form">
                                 <input name="email" type="email" class="form-box required" placeholder="Email Address">
-                                <input type="password" name="psw" class="form-box required" placeholder="Password">
+
+                                @error('email')
+                                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                                <input type="password" name="password" class="form-box required" placeholder="Password">
+
+                                @error('password')
+                                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+
+
                                 <div class="sign-in-settings">
                                     <input type="checkbox" name="newsletter" value="1">
                                     <span>Remember me</span>
@@ -69,15 +84,67 @@
                     </div>
                     <div class="sign-up-form">
                         <form method="POST" action="{{ route('register') }}">>
-                            <input name="email" type="text" class="form-box required" placeholder="First Name">
-                            <input name="email" type="text" class="form-box required" placeholder="Last Name">
-                            <input name="email" type="text" class="form-box required" placeholder="Tribe">
-                            <input name="email" type="text" class="form-box required" placeholder="State of Origin">
-                            <input name="email" type="text" class="form-box required" placeholder="Nationality">
+                            @csrf
+                            <input name="first_name" type="text" class="form-box required" placeholder="First Name">
+                            @error('first_name')
+                            <span class="invalid-feedback" role="alert">
+                                        <strong >{{ $message }}</strong>
+                                    </span>
+                            @enderror
+                            <input name="last_name" type="text" class="form-box required" placeholder="Last Name">
+                            @error('last_name')
+                            <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                            @enderror
+                            <input name="tribe" type="text" class="form-box required" placeholder="Tribe">
+                            @error('tribe')
+                            <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                            @enderror
+                            <input name="state" type="text" class="form-box required" placeholder="State of Origin">
+
+
+                            @error('state')
+                            <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                            @enderror
+                            <input name="nationality" type="text" class="form-box required" placeholder="Nationality">
+
+                            @error('nationality')
+                            <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                            @enderror
                             <input name="email" type="email" class="form-box required" placeholder="Email Address">
-                            <input type="password" name="psw" class="form-box" placeholder="Password">
-                            <input type="password" name="re-psw" class="form-box" placeholder="Repeat Password">
-                            <input type="submit" class="submit-button" value="Signup">
+
+
+                            @error('email')
+                            <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                            @enderror
+                            <input type="password" name="password" class="form-box" placeholder="Password">
+
+                            @error('password')
+                            <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                            @enderror
+                            <input id="password-confirm" type="password" name="password_confirmation" class="form-box" placeholder="Repeat Password">
+
+
+                            @error('password_confirmation')
+                            <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                            @enderror
+
+                            <button type="submit" class="submit-button">
+                                {{ __('Register') }}
+                            </button>
                         </form>
                     </div>
                 </div>

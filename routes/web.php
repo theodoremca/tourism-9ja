@@ -28,6 +28,7 @@ Auth::routes();
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/home', 'HomeController@index')->name('home');
 
+
     //Comment
     Route::get('/comment', 'CommentController@index')->name('comment.index')->middleware('can:CanViewComment');
     Route::get('/comment/create', 'CommentController@create')->name('comment.create')->middleware('can:CanCreateComment');
@@ -45,10 +46,15 @@ Route::group(['middleware' => 'auth'], function () {
     Route::delete('/image/{image}', 'ImageController@destroy')->name('image.destroy')->middleware('can:CanDeactivateImage');
 
     //Profile
-    Route::get('/profile', 'ProfileController@index')->name('profile.index')->middleware('can:CanViewProfile');
-    Route::get('/profile/edit/{profile}', 'ProfileController@edit')->name('profile.edit')->middleware('can:CanEditProfile');
-    Route::put('/profile-update/{profile}', 'ProfileController@update')->name('profile.update')->middleware('can:CanEditProfile');
-    Route::delete('/profile/{profile}', 'ProfileController@destroy')->name('profile.destroy')->middleware('can:CanDeactivateProfile');
+    Route::get('/userProfile/edit/{profile}', 'userProfileController@edit')->name('userProfile.edit')->middleware('can:CanEditUserProfile');
+
+
+    Route::patch('/userProfile-update/{profile}',
+                  'userProfileController@update')->name(
+                      'userProfile.update');
+
+
+    Route::delete('/userProfile/{profile}', 'userProfileController@destroy')->name('userProfile.destroy')->middleware('can:CanDeactivateUserProfile');
 
     //SubComment
     Route::get('/subcomment', 'SubCommentController@index')->name('subcomment.index')->middleware('can:CanViewSubComment');
@@ -67,22 +73,24 @@ Route::group(['middleware' => 'auth'], function () {
     Route::delete('/tourismplaces/{tourismplaces}', 'TourismPlacesController@destroy')->name('tourismplaces.destroy')->middleware('can:CanDeactivateTourismPlaces');
 
 });
-
+//views
 Route::get('/blog', 'BlogController@index')->name('blog');
 Route::get('/blog/{id}', 'BlogController@show')->name('blog.show');
 Route::view('/about', 'about')->name('about');
-// Route::view('/login', 'login')->name('login');
 Route::view('/sign-in', 'sign-in')->name('sign-in');
 Route::view('/contact', 'contact')->name('contact');
-Route::view('/home', 'pages.home')->name('home');
-Route::view('/user', 'pages.UserProfile')->name('user');
+Route::view('/home', 'pages.home')->name('homePage');
+Route::view('/userProfile', 'pages.UserProfile')->name('userProfile')->middleware('auth');
 Route::view('/createBlog', 'pages.createBlog')->name('createBlog');
 Route::view('/updateBlog', 'pages.updateBlog')->name('updateBlog');
 Route::view('/contact', 'pages.ContactUs')->name('contact');
-Route::view('/blog-page', 'pages.blogDetails')->name('blog-page');
-// Route::view('/blog-page', 'pages.blogPage')->name('blog-page');
+Route::view('/blog-page', 'pages.blogDetails')->name('blog-page')->middleware('auth');
 
 
 
 
 Auth::routes();
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

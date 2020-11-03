@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use Illuminate\Http\Request;
 
-class ProfileController extends Controller
+class userProfileController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -68,7 +69,8 @@ class ProfileController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user = User::all();
+        dd($user);
     }
 
     /**

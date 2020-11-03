@@ -182,18 +182,20 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dolor turpis, pulvinar varius dui id, convallis iaculis eros. Praesent porta lacinia elementum.</p>
                     </div>
                     <div class="sign-up-form">
-                        <form action="https://designermachinefonts.net/dm/html/adventure/adventures/mail.php" method="post">
+                        <form action="/userProfile-update/{{Auth::user()->id}}" method="post">
+                            @method('PATCH')
+                            @csrf
                             <div class="col-md-6">
-                            <input name="email" type="text" class="form-box required" placeholder="First Name">
-                            <input name="email" type="text" class="form-box required" placeholder="Last Name">
-                            <input name="email" type="text" class="form-box required" placeholder="Tribe">
-                            <input name="email" type="text" class="form-box required" placeholder="State of Origin">
+                            <input name="first_name" type="text" class="form-box required"  value=" {{Auth::user()->first_name}}" placeholder="First Name">
+                            <input name="last_namee" type="text" class="form-box required"  value=" {{Auth::user()->last_name}}" placeholder="Last Name">
+                            <input name="tribe" type="text" class="form-box required"  value=" {{Auth::user()->tribe}}" placeholder="Tribe">
+                            <input name="state" type="text" class="form-box required" value=" {{Auth::user()->state}}"  placeholder="State of Origin">
                             </div>
                             <div class="col-md-6">
-                            <input name="email" type="text" class="form-box required" placeholder="Nationality">
-                            <input name="email" type="email" class="form-box required" placeholder="Email Address">
-                            <input type="password" name="psw" class="form-box" placeholder="Password">
-                            <input type="password" name="re-psw" class="form-box" placeholder="Repeat Password">
+                            <input name="nationality" type="text" class="form-box required" value=" {{Auth::user()->nationality}}"  placeholder="Nationality">
+                            <input name="email" type="email" class="form-box required"  value=" {{Auth::user()->email}}" placeholder="Email Address">
+                            <input type="password" name="psw" class="form-box"  value=" {{Auth::user()->password}}" placeholder="Password">
+                            <input type="password" name="re-psw" class="form-box"  placeholder="Repeat Password">
                             </div>
                             <input type="submit" class="submit-button" value="Save">
 

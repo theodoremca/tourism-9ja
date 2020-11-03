@@ -26,12 +26,25 @@
                     <div class="row">
                         <div class="col-md-8 col-sm-6 col-xs-12 floatright">
                             <div class="header-top-right">
+                                @guest
                                 <div class="login ">
-                                    <a href="{{route('sign-in')}}"><i class="fa fa-pencil-square-o"></i>Register</a>
+                                    <a href="{{route('sign-in')}}"><i class="fa fa-pencil-square-o"></i>Register / SignIn</a>
                                 </div>
-                                <div class="account">
-                                    <a href="{{route('sign-in')}}"><i class="fa fa-lock"></i>sign In</a>
-                                </div>
+                                @else
+                                    <div class="login ">
+                                        <a href="{{route('logout')}}"
+
+                                           onclick="event.preventDefault();
+                                        document.getElementById('logout-form').submit();"
+
+                                        ><i class="fa fa-pencil-square-o"></i>Log Out </a>
+                                    </div>
+                                    <div class="login ">
+                                        <a href="{{route('userProfile')}}"><i class="fa fa-user-circle-o"></i>Hi! {{ Auth::user()->first_name }} </a>                                </div>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                @endguest
                             </div>
                         </div>
                     </div>
